@@ -1,0 +1,191 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    background: linear-gradient(135deg, rgba(29, 78, 216, 0.8), rgba(29, 216, 120, 0.8));
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.5s ease-in-out;
+}
+
+header:hover {
+    background: linear-gradient(135deg, rgba(29, 78, 216, 1), rgba(29, 216, 120, 1));
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffdd59;
+}
+
+/* Section Styles */
+section {
+    padding: 5rem 0;
+    text-align: center;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Backgrounds with HD Images */
+#about {
+    background: linear-gradient(135deg, rgba(2, 62, 138, 0.8), rgba(0, 150, 199, 0.8)), url('https://source.unsplash.com/1920x1080/?creative,office');
+}
+
+#projects {
+    background: linear-gradient(135deg, rgba(204, 43, 94, 0.8), rgba(117, 58, 136, 0.8)), url('https://source.unsplash.com/1920x1080/?programming,technology');
+}
+
+#skills {
+    background: linear-gradient(135deg, rgba(29, 216, 120, 0.8), rgba(29, 78, 216, 0.8)), url('https://source.unsplash.com/1920x1080/?coding,webdevelopment');
+}
+
+#contact {
+    background-color: #1b1b2f;
+}
+
+#about h1, #projects h2, #skills h2, #contact h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInUp 1s forwards;
+}
+
+/* Fade and Slide Animations */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project, .skills ul, .contact form {
+    opacity: 0;
+    transform: scale(0.9);
+    animation: popUp 1.5s forwards;
+}
+
+@keyframes popUp {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Skills Styling */
+#skills ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#skills ul li {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#skills ul li:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 221, 89, 0.8);
+}
+
+/* Contact Form */
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact form input, 
+#contact form textarea {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: #f4f4f4;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#contact form button {
+    padding: 10px 15px;
+    background-color: #ff5e57;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#contact form button:hover {
+    background-color: #ffdd59;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+footer p {
+    animation: fadeIn 3s ease-in-out;
+}
